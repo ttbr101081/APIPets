@@ -1,42 +1,8 @@
-# Ejercicio de APIS 
-Author: Rodrigo Terán
+# Concluciones 
+Durante la ejecución de las pruebas automatizadas en Karate, se observó que el API de búsqueda por estado no retorna todos los items esperados. Al realizar una comparación cruzada mediante la búsqueda individual por ID, se verificó que los datos (nombre del estado e ID) sí cumplen con los cambios realizados, lo que sugiere un posible problema en la paginación o filtrado del endpoint de búsqueda general.
 
-Proyecto generado con Karate, Junit5, maven, java 
+Además, se identificó que bajo condiciones de consumo repetitivo o alto volumen de peticiones consecutivas, los servicios presentan inestabilidad, llegando incluso a caer o devolver respuestas de error. Esto indica que sería necesario revisar la capacidad del sistema para manejar cargas sostenidas y considerar ajustes en términos de escalabilidad, caché o límites de tasa de consumo.
 
-1. Prerequisitos: 📃
-   
-   
-   -  Maquina local con el sistema operativo Windows 11
-   -  IDE IntelliJ 
-   -  maven version 3.9.4
-   -  Java SE - JDK version 21
-
-2. Instrucciones para correr Automatizaciones: ✔️
-   - Abrir IntelliJ
-   - Abrir proyecto "APIPets"
-  
-  
-   **** EJECUTAR ****
-
-   - Abrir carpeta "src" 
-   - Abrir carpeta "test"
-   - Abrir carpeta "java"
-   
-   
-   * click derecho en "KarateRunner"
-   * click en "Run KarateRunner"
-  
-**** VER LOS INFORMES ****
-* Abrir Carpeta "target"
-* Abrir Carpeta "karate-reports"
-* click en "karate-summary.html"
-  
-![image](https://github.com/user-attachments/assets/b5d6604a-acc4-475d-b614-00f7ac8f102f)
-
-* Otra Opcion es despues de correr al final del log se encontrar un link
-  
-![image](https://github.com/user-attachments/assets/d49e5950-a95d-4ba5-9cec-016280746f3d)
-
-
+En base a estos hallazgos, se recomienda realizar una revisión técnica del endpoint de búsqueda por estado y evaluar pruebas de estrés adicionales para garantizar la disponibilidad y estabilidad del API bajo diferentes escenarios de uso.
 
 
